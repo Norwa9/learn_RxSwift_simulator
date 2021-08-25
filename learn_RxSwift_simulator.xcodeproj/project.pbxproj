@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		1B8518F026B8E2B100BAB9BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8518EE26B8E2B100BAB9BA /* Main.storyboard */; };
 		1B8518F226B8E2B300BAB9BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8518F126B8E2B300BAB9BA /* Assets.xcassets */; };
 		1B8518F526B8E2B300BAB9BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8518F326B8E2B300BAB9BA /* LaunchScreen.storyboard */; };
+		1B99D93826BB96EF00BD2287 /* UIImagePickerController+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99D93726BB96EF00BD2287 /* UIImagePickerController+RxSwift.swift */; };
+		1B99D93B26BBC41600BD2287 /* RxImagePickerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99D93A26BBC41600BD2287 /* RxImagePickerDelegateProxy.swift */; };
+		1B99D93E26BBCE2C00BD2287 /* RxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99D93D26BBCE2C00BD2287 /* RxModel.swift */; };
+		1B99D94126BBD72500BD2287 /* LWViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99D94026BBD72500BD2287 /* LWViewModel.swift */; };
+		1B99D94526BBDB1300BD2287 /* LWValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99D94426BBDB1300BD2287 /* LWValidationService.swift */; };
+		1B99D94826BCD75200BD2287 /* WhatsNewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99D94726BCD75200BD2287 /* WhatsNewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		1B8518F126B8E2B300BAB9BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B8518F426B8E2B300BAB9BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B8518F626B8E2B300BAB9BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B99D93726BB96EF00BD2287 /* UIImagePickerController+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+RxSwift.swift"; sourceTree = "<group>"; };
+		1B99D93A26BBC41600BD2287 /* RxImagePickerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxImagePickerDelegateProxy.swift; sourceTree = "<group>"; };
+		1B99D93D26BBCE2C00BD2287 /* RxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxModel.swift; sourceTree = "<group>"; };
+		1B99D94026BBD72500BD2287 /* LWViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWViewModel.swift; sourceTree = "<group>"; };
+		1B99D94426BBDB1300BD2287 /* LWValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWValidationService.swift; sourceTree = "<group>"; };
+		1B99D94726BCD75200BD2287 /* WhatsNewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewHelper.swift; sourceTree = "<group>"; };
 		2796A39953C24094F75E7DB2 /* Pods-learn_RxSwift_simulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn_RxSwift_simulator.debug.xcconfig"; path = "Target Support Files/Pods-learn_RxSwift_simulator/Pods-learn_RxSwift_simulator.debug.xcconfig"; sourceTree = "<group>"; };
 		804AA77360F75E0917054ED7 /* Pods-learn_RxSwift_simulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn_RxSwift_simulator.release.xcconfig"; path = "Target Support Files/Pods-learn_RxSwift_simulator/Pods-learn_RxSwift_simulator.release.xcconfig"; sourceTree = "<group>"; };
 		EC0F87BF8C2C5F2892B0DBF3 /* Pods_learn_RxSwift_simulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learn_RxSwift_simulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +60,6 @@
 				2796A39953C24094F75E7DB2 /* Pods-learn_RxSwift_simulator.debug.xcconfig */,
 				804AA77360F75E0917054ED7 /* Pods-learn_RxSwift_simulator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +84,69 @@
 		1B8518E726B8E2B100BAB9BA /* learn_RxSwift_simulator */ = {
 			isa = PBXGroup;
 			children = (
+				1B99D94626BCD73D00BD2287 /* whatsNew */,
+				1B99D93F26BBD71800BD2287 /* RxSwift+MVVM */,
+				1B99D93C26BBCE1F00BD2287 /* RxDataSource */,
+				1B99D93626BB96C500BD2287 /* extension */,
 				1B8518E826B8E2B100BAB9BA /* AppDelegate.swift */,
 				1B8518EA26B8E2B100BAB9BA /* SceneDelegate.swift */,
 				1B8518EC26B8E2B100BAB9BA /* ViewController.swift */,
+				1B99D93A26BBC41600BD2287 /* RxImagePickerDelegateProxy.swift */,
 				1B8518EE26B8E2B100BAB9BA /* Main.storyboard */,
 				1B8518F126B8E2B300BAB9BA /* Assets.xcassets */,
 				1B8518F326B8E2B300BAB9BA /* LaunchScreen.storyboard */,
 				1B8518F626B8E2B300BAB9BA /* Info.plist */,
 			);
 			path = learn_RxSwift_simulator;
+			sourceTree = "<group>";
+		};
+		1B99D93626BB96C500BD2287 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				1B99D93726BB96EF00BD2287 /* UIImagePickerController+RxSwift.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		1B99D93C26BBCE1F00BD2287 /* RxDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				1B99D93D26BBCE2C00BD2287 /* RxModel.swift */,
+			);
+			path = RxDataSource;
+			sourceTree = "<group>";
+		};
+		1B99D93F26BBD71800BD2287 /* RxSwift+MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				1B99D94326BBDAD500BD2287 /* Services */,
+				1B99D94226BBDACF00BD2287 /* ViewModel */,
+			);
+			path = "RxSwift+MVVM";
+			sourceTree = "<group>";
+		};
+		1B99D94226BBDACF00BD2287 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B99D94026BBD72500BD2287 /* LWViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B99D94326BBDAD500BD2287 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B99D94426BBDB1300BD2287 /* LWValidationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1B99D94626BCD73D00BD2287 /* whatsNew */ = {
+			isa = PBXGroup;
+			children = (
+				1B99D94726BCD75200BD2287 /* WhatsNewHelper.swift */,
+			);
+			path = whatsNew;
 			sourceTree = "<group>";
 		};
 		F089D887F4E08F4B20A5AF32 /* Frameworks */ = {
@@ -207,6 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8518ED26B8E2B100BAB9BA /* ViewController.swift in Sources */,
+				1B99D93B26BBC41600BD2287 /* RxImagePickerDelegateProxy.swift in Sources */,
+				1B99D93826BB96EF00BD2287 /* UIImagePickerController+RxSwift.swift in Sources */,
+				1B99D94526BBDB1300BD2287 /* LWValidationService.swift in Sources */,
+				1B99D94126BBD72500BD2287 /* LWViewModel.swift in Sources */,
+				1B99D94826BCD75200BD2287 /* WhatsNewHelper.swift in Sources */,
+				1B99D93E26BBCE2C00BD2287 /* RxModel.swift in Sources */,
 				1B8518E926B8E2B100BAB9BA /* AppDelegate.swift in Sources */,
 				1B8518EB26B8E2B100BAB9BA /* SceneDelegate.swift in Sources */,
 			);

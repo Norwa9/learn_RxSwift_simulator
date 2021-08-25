@@ -6,6 +6,8 @@ target 'learn_RxSwift_simulator' do
   use_frameworks!
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
+  pod 'RxDataSources'
+  pod 'WhatsNewKit'
   # Pods for learn_RxSwift_simulator
 
 end
